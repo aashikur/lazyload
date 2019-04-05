@@ -147,8 +147,10 @@ h1{
         $(document).ready(lazyload);
 
 		function lazyload(){
+			$('img').attr('src',Place_holder_image);
 			$('img').each(function(){
 				var src_img = $(this).attr('data-src');
+				$('img').attr('src',Place_holder_image);
 				if(elementInViewPort(this)){
 					$(this).attr('src',src_img);
 				}
