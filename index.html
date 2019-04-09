@@ -145,8 +145,9 @@ h1{
      	$('img').attr('src',Place_holder_image);
 	
 	        // Progress bar Scripts
-      $(window).scroll(function(){
-            $("img").each(function(){
+      $(window).scroll(Load_img);
+	function Load_img(){
+	            $("img").each(function(){
 
                 // take value from bottom screen of windows // take Value of Bottom of Windows // take Indivisual value of Progress Bar
                 var bottom_of_object = $(this).offset().top + $(this).outerHeight(); 
@@ -158,8 +159,7 @@ h1{
                 }
 
             });
-        });
-
+	}
 
 	
 
