@@ -165,7 +165,18 @@ h1{
 	$('img').each(function(){
 		
 		var x = $(this).attr('data-src');
-		$(this).attr('src', x );
+		$(this).attr('src', x ).css('display','none');
+		
+		
+		
+		
+		
+		var bottom_of_object = $(this).offset().top + $(this).outerHeight(); 
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+              
+                if(bottom_of_object < bottom_of_window) {
+                    $(this).css('display','block');
+                }
 	});
 	
 
