@@ -143,29 +143,7 @@ h1{
 
     var Place_holder_image = 'img/load.gif'; // All Image For the Place Holder
         $('img').attr('src',Place_holder_image);
-setTimeout(function(){
 
-        $(window).scroll(lazyload);
-        $(document).ready(lazyload);
-
-		function lazyload(){
-			$('img').each(function(){
-				var src_img = $(this).attr('data-src');
-				if(elementInViewPort(this)){
-					$(this).attr('src',src_img);
-				}
-			});
-		}
-		function elementInViewPort(el){
-			var rect = el.getBoundingClientRect();
-			return (
-			rect.top >= 0 &&
-			 rect.left >= 0 && 
-			 rect.bottom <= (window.innerHeight ||document.documentElement.clientHeight) && 
-			 rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-			);
-		}	
-	 }, 0);
 </script>
 </body>
 </html>
