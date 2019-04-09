@@ -140,10 +140,11 @@ h1{
 </script> 
 
 <script>
-	$(document).ready(function(){
+
     var Place_holder_image = 'img/load.gif'; // All Image For the Place Holder
         $('img').attr('src',Place_holder_image);
-	};
+setTimeout(function(){
+
         $(window).scroll(lazyload);
         $(document).ready(lazyload);
 
@@ -164,6 +165,7 @@ h1{
 			 rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 			);
 		}	
+	 }, 0);
 </script>
 </body>
 </html>
