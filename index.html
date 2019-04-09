@@ -142,7 +142,26 @@ h1{
 <script>
 
     var Place_holder_image = 'img/load.gif'; // All Image For the Place Holder
-        $('img').attr('src',Place_holder_image);
+     	$('img').attr('src',Place_holder_image);
+	
+	        // Progress bar Scripts
+      $(window).scroll(function(){
+            $("img").each(function(){
+
+                // take value from bottom screen of windows // take Value of Bottom of Windows // take Indivisual value of Progress Bar
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight(); 
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                var myVal = $(this).attr("data-src");
+
+                if(bottom_of_object < bottom_of_window) {
+                    $(this).attr('src',myVal);
+                }
+
+            });
+        });
+
+
+	
 
 </script>
 </body>
