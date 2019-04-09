@@ -140,9 +140,10 @@ h1{
 </script> 
 
 <script>
+	$(document).ready(function(){
     var Place_holder_image = 'img/load.gif'; // All Image For the Place Holder
-
         $('img').attr('src',Place_holder_image);
+	};
         $(window).scroll(lazyload);
         $(document).ready(lazyload);
 
